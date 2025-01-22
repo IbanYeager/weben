@@ -1,0 +1,465 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 100px;
+    display: flex;
+  }
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d2713; 
+    padding: 0 20px;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    border-radius: 20px;
+  }
+  .navbar a {
+    width: auto;
+    text-decoration: none;
+    color: white; 
+    padding: 15px 20px;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; 
+    border-radius: 20px;
+  }
+
+  .navbar a:hover {
+    background-color: #14530e; 
+    width: auto;
+  }
+
+  
+  .navbar .menu {
+    display: flex;
+    gap: 10px; 
+  }
+  .menu-toggle-checkbox {
+    display: none; /* Sembunyikan checkbox */
+}
+
+.menu-toggle-label {
+    display: none; /* Sembunyikan label di desktop */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+  
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Pastikan elemen tetap fleksibel secara horizontal */
+        gap: 12px;
+        padding: 10px 15px;
+    }
+    .container li {
+        flex: 1 1 calc(33.333% - 10px); /* Atur lebar item untuk grid 3 kolom */
+        aspect-ratio: 1 / 1;
+    }
+    .navbar .menu{
+        display: none; /* Sembunyikan menu secara default */
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .menu-toggle-label {
+        display: block;
+    }
+
+    /* Ketika checkbox dicentang, tampilkan menu */
+    .menu-toggle-checkbox:checked + .menu-toggle-label + .menu {
+        display: flex;
+    }
+
+    .navbar {
+      flex-direction: row;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .navbar .menu {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .navbar a {
+      text-align: left;
+    }
+
+
+  }
+  .container4{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 500px;
+    text-overflow: ellipsis;
+  }
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #113d18, #37aa4b, #b7f8c0, #fff);
+    background-size: 200% 200%; 
+  }
+.avatar-container {
+    display: flex;
+    perspective: 1000px; 
+    justify-content: center;
+    padding: 30px;
+  }
+.avatar{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    margin-top: 100px;
+}
+.avatar:hover{
+    animation: rotateOnce 1s ease;
+    transform: scale(1.2) rotateY(360deg); 
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+@keyframes rotateOnce {
+    from {
+        transform: scale(1) rotateY(0deg);
+    }
+    to {
+        transform: scale(1.2) rotateY(360deg);
+    }
+}
+.text {
+    opacity: 0; 
+    position: absolute;
+    top: 300px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0); 
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap; 
+    transition: opacity 0.3s ease; 
+  }
+
+  
+  .avatar-container:hover .text {
+    opacity: 1; 
+  }
+  
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-emphasis: center;
+    background-color: rgb(22, 21, 21);
+    margin-bottom: 50px;
+}
+
+.container{
+    opacity: 0.8;
+    padding: 20px 30px;
+    color: #ffffff;
+    border-radius: 8px;
+    max-width: 550px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    height: auto;
+    gap: 16px;
+    transition: 0.3s;
+    min-height: auto;
+    box-sizing: border-box;
+}
+
+.container li{
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 100px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.container li img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container li,
+.container li img
+{
+    transition: 0.3s;
+}
+.container li .content{
+    transition: 1.5s ease;
+}
+.container span{
+    text-align: center;
+    width: 75%;
+}
+.container h2{
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 4px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+}
+
+.container p{
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    width: 100%;
+}
+.container li .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    color: #fff;
+    padding: 15px;
+    opacity: 0;body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #113d18, #37aa4b, #b7f8c0, #fff);
+    background-size: 200% 200%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d2713;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    min-height: 100px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #14530e;
+    border-radius: 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 10px;
+}
+
+.avatar-container {
+    display: inline-block;
+    perspective: 1000px;
+    justify-content: center;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.avatar:hover {
+    transform: scale(1.2) rotateY(360deg);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.container li {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 80px;
+    border-radius: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.container li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container li,
+.container li img {
+    transition: 0.3s;
+}
+
+.container li .content {
+    transition: 1.5s ease;
+}
+
+.container span {
+    text-align: center;
+    width: 75%;
+}
+
+.container h2 {
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 4px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    color: rgb(0, 0, 0);
+}
+
+
+.container p {
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    width: 100%;
+}
+
+.container li .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    color: #fff;
+    padding: 15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container li .container span {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 0px;
+    translate: -50%;
+    scale: 0.85;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.container li:hover {
+    flex: 0 1 260px;
+    scale: 1.1;
+    z-index: 10;
+    opacity: 1;
+}
+
+.container li:hover .content {
+    opacity: 1;
+    visibility: visible;
+}
+
+.container li:hover span {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+}
+    visibility: hidden;
+}
+.container li .container span{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 0px;
+    translate: -50%;
+    scale: 0.85;
+    visibility: hidden;
+    opacity: 0;
+}
+.container li:hover{
+    flex: 0 1 260px;
+    scale: 1.1;
+    z-index: 10;
+    opacity: 1;
+}
+.container li:hover .content{
+    opacity: 1;
+    visibility: visible;
+}
+.container li:hover span{
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #0d2713;
+    font-size: 24px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #257733;
+    transform: scale(1.2);
+}
+
+
+.contact-container {
+    width: 30%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 200px;
+}
+
+.contact-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
