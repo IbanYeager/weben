@@ -49,18 +49,10 @@ body {
 }
 
   
-  @media (max-width: 768px) {
-    .container {
-        flex-direction: row; /* Pastikan elemen tetap fleksibel secara horizontal */
-        gap: 12px;
-        padding: 10px 15px;
-    }
-    .container li {
-        flex: 1 1 calc(33.333% - 10px); /* Atur lebar item untuk grid 3 kolom */
-        aspect-ratio: 1 / 1;
-    }
+  @media (max-width: 480px) {
+    
     .navbar .menu{
-        display: none; /* Sembunyikan menu secara default */
+        display: none; 
         width: 100%;
         flex-direction: column;
 
@@ -174,28 +166,27 @@ body{
     padding: 20px 30px;
     color: #ffffff;
     border-radius: 8px;
-    max-width: 550px;
     text-align: center;
-    width: 100%;
     display: flex;
-    
-    justify-content: center;
-    height: auto;
+    height: 500px;
     gap: 16px;
     transition: 0.3s;
-    min-height: auto;
-    box-sizing: border-box;
+    display: grid;
+    place-items: center;
 }
 
 .container li{
     position: relative;
     overflow: hidden;
-    flex: 1 1 100px;
+    flex: 0 1 80px;
     aspect-ratio: 1 / 1;
     border-radius: 50px;
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid #ddd;
+    height: 150px;
+    width: 300px;
+    
 }
 
 .container li img{
